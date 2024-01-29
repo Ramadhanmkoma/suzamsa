@@ -1,0 +1,7 @@
+{
+  "name": "suzamsa",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
