@@ -29,7 +29,7 @@ To get started with the SUZAMSA App, follow these steps:
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/suzamsa-app.git
+   git clone https://github.com/Ramadhanmkoma/suzamsa.git
    cd suzamsa-app
    ```
 
@@ -48,8 +48,8 @@ For more detailed instructions and documentation, refer to the [Documentation](.
 ## Tech Stack
 
 - **Frontend:**
-  - [React Native](https://reactnative.dev/) for mobile app development.
-  - [React](https://reactjs.org/) for web app development.
+  - [Ionic](https://ionicframework.com/) for mobile app development.
+  - [Angular](https://angular.dev/) for web app development.
   - Other relevant technologies...
 
 - **Backend:**
@@ -64,4 +64,3 @@ We welcome contributions! If you'd like to contribute to the SUZAMSA App, please
 ## License
 
 This project is licensed under the [MIT License](./LICENSE).
-
