@@ -65,7 +65,11 @@ For more detailed instructions and documentation, refer to the [Documentation](.
   - Other relevant technologies...
 
 - **Backend:**
+<<<<<<< HEAD
   - [Spring Boot](https://spring.io/projects/spring-boot) Spring boot (java).
+=======
+  - [Spring Boot](https://spring.io/projects/spring-boot) Spring boot (java)
+>>>>>>> d98d914496153a0d514288b765e0acce80db5840
   - [Node.js](https://nodejs.org/) for server-side development.
   - [Express](https://expressjs.com/) for building RESTful APIs.
   - Other relevant technologies...
