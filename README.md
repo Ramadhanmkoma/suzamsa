@@ -36,11 +36,16 @@ To get started with the SUZAMSA App, follow these steps:
 2. **Install Dependencies:**
    ```bash
    # Instructions for installing dependencies (if any)
+   npm i or npm install
    ```
 
 3. **Run the App:**
    ```bash
    # Instructions for running the app locally
+   ## if you are using ionic cli
+   ionic serve
+   ## if you are using angular cli
+   ng serve
    ```
 
 For more detailed instructions and documentation, refer to the [Documentation](./docs) folder.
@@ -48,11 +53,12 @@ For more detailed instructions and documentation, refer to the [Documentation](.
 ## Tech Stack
 
 - **Frontend:**
-  - [Ionic](https://ionicframework.com/) for mobile app development.
-  - [Angular](https://angular.dev/) for web app development.
+  - [React Native](https://reactnative.dev/) for mobile app development.
+  - [React](https://reactjs.org/) for web app development.
   - Other relevant technologies...
 
 - **Backend:**
+  - Spring boot (java)
   - [Node.js](https://nodejs.org/) for server-side development.
   - [Express](https://expressjs.com/) for building RESTful APIs.
   - Other relevant technologies...
