@@ -53,11 +53,9 @@ For more detailed instructions and documentation, refer to the [Documentation](.
 ## Tech Stack
 
 - **Frontend:**
-<<<<<<<<< Temporary merge branch 1
   - Angular ionic for web and responsive in a mobile
   - [Ionic](https://ionicframework.com/) for mobile app development.
   - [Angular](https://angular.dev/) for web app development.
->>>>>>>>> Temporary merge branch 2
   - Other relevant technologies...
 
 - **Backend:**
