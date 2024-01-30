@@ -1,5 +1,11 @@
 # SUZAMSA App
 
+بسم الله الرحمن الرحيم
+
+In the name of Allah, the Most Gracious, the Most Merciful.
+
+May Allah, the Most Gracious and Most Merciful, bless and guide the SUZAMSA project. May it be a source of knowledge, guidance, and positive impact within the Muslim community and beyond. May Allah grant success to all those involved, and may the project contribute to the betterment of the Akhirah. Ameen.
+
 Welcome to the SUZAMSA App repository! This app is designed to centralize and organize da'awa content, providing a platform for spreading Islamic knowledge and facilitating engagement.
 
 ## Table of Contents
