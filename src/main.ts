@@ -5,11 +5,11 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
-import { environment } from './environments/environment';
+// import { environment } from './environments/environment';
 
-if (environment.production) {
-  enableProdMode();
-}
+// if (environment.production) {
+//   enableProdMode();
+// }
 
 bootstrapApplication(AppComponent, {
   providers: [
