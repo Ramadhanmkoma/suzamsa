@@ -30,7 +30,7 @@ To get started with the SUZAMSA App, follow these steps:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/Ramadhanmkoma/suzamsa.git
-   cd suzamsa-app
+   cd suzamsa
    ```
 
 2. **Install Dependencies:**
@@ -59,7 +59,7 @@ For more detailed instructions and documentation, refer to the [Documentation](.
   - Other relevant technologies...
 
 - **Backend:**
-  - Spring boot (java)
+  - [Spring Boot](https://spring.io/projects/spring-boot) Spring boot (java).
   - [Node.js](https://nodejs.org/) for server-side development.
   - [Express](https://expressjs.com/) for building RESTful APIs.
   - Other relevant technologies...
