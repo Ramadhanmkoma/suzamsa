@@ -10,4 +10,23 @@
       <ion-title size="large">home</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="home_container">
+    <!-- list all the audio contents -->
+    <!-- {{ messages[3].message.audio.file_name }} -->
+
+    <!-- list interms of cards -->
+    @for(ad of audios; track ad) {
+      <!-- @if(message.message.audio.file_name !== '') { -->
+        <ion-card button (click)="playAudio(ad.message.audio.file_name)">
+          <ion-card-header>
+            <ion-card-title>{{ ad.message.audio.file_name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{ ad.message.audio.file_name }}</p>
+          </ion-card-content>
+        </ion-card>
+      <!-- } -->
+    }
+  </div>
 </ion-content>
