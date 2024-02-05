@@ -34,6 +34,7 @@ import {
   warningOutline,
   warningSharp,
 } from 'ionicons/icons';
+import { libraryOutline, librarySharp, homeOutline, homeSharp} from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -66,6 +67,13 @@ export class AppComponent {
     { title: 'Mihadhara', url: '/folder/favorites', icon: 'playCircleOutline' },
     { title: 'Mipangilio', url: '/folder/archived', icon: 'archive' },
     { title: '', url: '/folder/trash', icon: 'trash' },
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Mihadhara', url: '/mihadhara', icon: 'library' },
+    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
+    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
+    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
+    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
+    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
@@ -90,6 +98,10 @@ export class AppComponent {
       bookmarkOutline,
       bookmarkSharp,
       playCircleOutline,
+      homeOutline,
+      homeSharp,
+      libraryOutline,
+      librarySharp
     });
   }
 }
