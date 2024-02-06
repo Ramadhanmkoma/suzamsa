@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'mihadhar',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
   {
@@ -13,10 +13,14 @@ export const routes: Routes = [
   },
   {
     path: 'mihadhara',
-    loadComponent: () => import('./pages/mihadhara/mihadhara.page').then( m => m.MihadharaPage)
+    loadComponent: () => import('./pages/mihadhara/mihadhara.page').then(m => m.MihadharaPage)
   },
   {
     path: 'home',
-    loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
+    loadComponent: () => import('./pages/home/home.page').then(m => m.HomePage)
+  },
+  {
+    path: 'gallery',
+    loadComponent: () => import('./pages/gallery/gallery.page').then( m => m.GalleryPage)
   },
 ];
