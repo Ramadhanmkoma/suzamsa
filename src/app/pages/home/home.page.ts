@@ -3,6 +3,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { TelegramApiService } from 'src/app/services/telegram-api.service';
+import { telegramConfig } from 'src/app/telegram.config';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +13,15 @@ import { TelegramApiService } from 'src/app/services/telegram-api.service';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class HomePage implements OnInit {
-  playAudio(_t20: any) {
-    new Audio(_t20).play();
+  public tkn = `https://api.telegram.org/bot${telegramConfig.bot_token}/getFile?file_id=`;
+  private audioElement: HTMLAudioElement = new Audio();
+  playAudio(audioUrl: string): void {
+
+    console.log(audioUrl);
+
+    this.audioElement.src = this.tkn + audioUrl;
+    this.audioElement.load();
+    this.audioElement.play();
   }
 
   private telegramApiService = inject(TelegramApiService);
@@ -31,6 +39,12 @@ export class HomePage implements OnInit {
         this.audios = this.messages.filter((message) => message.message && message.message.audio);
         console.log("audios", this.audios);
 
+      },
+      error: (error) => {
+        console.log("Error:", error);
+        if (error.name = "") {
+
+        }
       }
     })
   }

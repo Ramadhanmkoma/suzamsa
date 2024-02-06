@@ -1,0 +1,10 @@
+.audio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.audio-container .card {
+  flex: 1;
+}

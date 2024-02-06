@@ -31,7 +31,7 @@
                 "output": "assets"
               }
             ],
-            "styles": ["src/theme/variables.scss", "src/global.scss"],
+            "styles": ["src/theme/variables.scss", "src/global.scss", "node_modules/bootstrap-icons/font/bootstrap-icons.scss"],
             "scripts": []
           },
           "configurations": {
@@ -136,9 +136,7 @@
     }
   },
   "cli": {
-    "schematicCollections": [
-      "@ionic/angular-toolkit"
-    ],
+    "schematicCollections": ["@ionic/angular-toolkit"],
     "analytics": "16d97774-8290-41dd-82a2-73bca9e76c0b"
   },
   "schematics": {

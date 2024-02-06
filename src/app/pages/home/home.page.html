@@ -1,5 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>home</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,22 +14,28 @@
     </ion-toolbar>
   </ion-header>
 
-  <div class="home_container">
-    <!-- list all the audio contents -->
-    <!-- {{ messages[3].message.audio.file_name }} -->
+  <div class="home_container ion-padding">
 
-    <!-- list interms of cards -->
-    @for(ad of audios; track ad) {
+
+    <div class="audio-container">
+      <!-- list interms of cards -->
+      @for(ad of audios; track ad) {
       <!-- @if(message.message.audio.file_name !== '') { -->
-        <ion-card button (click)="playAudio(ad.message.audio.file_name)">
-          <ion-card-header>
-            <ion-card-title>{{ ad.message.audio.file_name }}</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <p>{{ ad.message.audio.file_name }}</p>
-          </ion-card-content>
-        </ion-card>
+      <ion-card button (click)="playAudio(ad.message.audio.file_id)">
+        <ion-card-header>
+          <ion-card-title>
+            <span class="bi bi-play-circle"></span>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ ad.message.audio.file_name }}</p>
+          <audio controls>
+            <source [src]="tkn + ad.message.audio.file_id" type="audio/ogg">
+          </audio>
+        </ion-card-content>
+      </ion-card>
       <!-- } -->
-    }
+      }
+    </div>
   </div>
 </ion-content>
