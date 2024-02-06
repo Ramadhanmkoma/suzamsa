@@ -13,11 +13,11 @@ export const routes: Routes = [
   },
   {
     path: 'mihadhara',
-    loadComponent: () => import('./pages/mihadhara/mihadhara.page').then( m => m.MihadharaPage)
+    loadComponent: () => import('./pages/mihadhara/mihadhara.page').then(m => m.MihadharaPage)
   },
   {
     path: 'home',
-    loadComponent: () => import('./pages/home/home.page').then( m => m.HomePage)
+    loadComponent: () => import('./pages/home/home.page').then(m => m.HomePage)
   },
   {
     path: 'gallery',

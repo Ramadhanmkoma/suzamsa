@@ -44,6 +44,7 @@ import {
   warningOutline,
   warningSharp,
 } from 'ionicons/icons';
+import { libraryOutline, librarySharp, homeOutline, homeSharp} from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
