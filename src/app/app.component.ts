@@ -14,21 +14,31 @@ import {
   IonMenuToggle,
   IonNote,
   IonRouterOutlet,
-  IonSplitPane,
-} from '@ionic/angular/standalone';
+  IonSplitPane
+,IonTabBar ,IonTabButton ,IonTabs } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
+  apps,
+  appsOutline,
   archiveOutline,
   archiveSharp,
   bookmarkOutline,
   bookmarkSharp,
+  flash,
+  flashOutline,
   heartOutline,
   heartSharp,
   mailOutline,
   mailSharp,
+  micCircle,
   paperPlaneOutline,
   paperPlaneSharp,
+  people,
+  person,
+  playCircle,
   playCircleOutline,
+  playOutline,
+  send,
   trashOutline,
   trashSharp,
   warningOutline,
@@ -41,7 +51,7 @@ import { libraryOutline, librarySharp, homeOutline, homeSharp} from 'ionicons/ic
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true,
-  imports: [
+  imports: [IonTabs, IonTabButton, IonTabBar,
     RouterLink,
     RouterLinkActive,
     CommonModule,
@@ -62,21 +72,18 @@ import { libraryOutline, librarySharp, homeOutline, homeSharp} from 'ionicons/ic
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Nyumbani', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Suzamsa', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Mihadhara', url: '/folder/favorites', icon: 'playCircleOutline' },
-    { title: 'Mipangilio', url: '/folder/archived', icon: 'archive' },
-    { title: '', url: '/folder/trash', icon: 'trash' },
-    { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Mihadhara', url: '/mihadhara', icon: 'library' },
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Nyumbani', url: '/folder/inbox', icon: 'house' },
+    { title: 'Suzamsa', url: '/folder/outbox', icon: 'people' },
+    { title: 'Mihadhara', url: '/folder/favorites', icon: 'play-circle' },
+    { title: 'Mipangilio', url: '/folder/archived', icon: 'phone' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+
+  public socialPages = [
+    { title: 'Telegram', url: 'https://', icon: 'telegram' },
+    { title: 'Whatsapp', url: 'https://', icon: 'whatsapp' },
+    { title: 'Youtube', url: 'https://', icon: 'youtube' },
+    { title: 'Tovuti', url: 'https://', icon: 'window' },
+  ];
 
   // Telegram API Service
 
@@ -98,10 +105,16 @@ export class AppComponent {
       bookmarkOutline,
       bookmarkSharp,
       playCircleOutline,
-      homeOutline,
-      homeSharp,
-      libraryOutline,
-      librarySharp
+      playCircle,
+      flashOutline,
+      flash,
+      apps,
+      appsOutline,
+      send,
+      playOutline,
+      micCircle,
+      person,
+      people,
     });
   }
 }
