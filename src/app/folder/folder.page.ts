@@ -4,13 +4,14 @@ import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent,
 import { addIcons } from 'ionicons';
 import { mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, heartOutline, heartSharp, archiveOutline, archiveSharp, trashOutline, trashSharp, warningOutline, warningSharp, bookmarkOutline, bookmarkSharp, playCircleOutline, flashOutline, flash, apps, appsOutline, send } from 'ionicons/icons';
 import { HomePage } from "../pages/home/home.page";
+import { TabsComponent } from '../resources/tabs/tabs.component';
 
 @Component({
     selector: 'app-folder',
     templateUrl: './folder.page.html',
     styleUrls: ['./folder.page.scss'],
     standalone: true,
-    imports: [IonNote, IonRouterOutlet, IonLabel, IonTabButton, IonTabBar, IonTabs, IonIcon, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonButtons, HomePage]
+    imports: [IonNote, IonRouterOutlet, IonLabel, IonTabButton, IonTabBar, IonTabs, IonIcon, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonButtons, HomePage, TabsComponent]
 })
 export class FolderPage implements OnInit {
   public folder!: string;
