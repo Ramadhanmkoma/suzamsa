@@ -1,8 +1,10 @@
+// Bismillahir Rahmaanir Rahiim
+
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule, SearchbarChangeEventDetail } from '@ionic/angular';
-import { IonSearchbarCustomEvent } from '@ionic/core';
+import { IonRangeCustomEvent, IonSearchbarCustomEvent, RangeChangeEventDetail } from '@ionic/core';
 import { addIcons } from 'ionicons';
 import {
   bonfire,
@@ -35,6 +37,13 @@ import { telegramConfig } from 'src/app/telegram.config';
   imports: [IonicModule, CommonModule, FormsModule, TabsComponent],
 })
 export class HomePage implements OnInit {
+rangeChange($event: IonRangeCustomEvent<RangeChangeEventDetail>) {
+  // this.audioElement.currentTime = Number($event.detail.value);
+  // this.currentAudioTime = this.audioElement.currentTime;
+  console.log($event.detail);
+  console.log($event);
+
+}
   played = false;
   currentAudioTime: number = 0;
   duration: number = 0;
@@ -152,8 +161,6 @@ export class HomePage implements OnInit {
 
   playAudio(audioUrl: string): void {
     console.log(audioUrl);
-    this.audioElement.src = `../../../assets/audios/welcome.mp3`;
-    this.audioElement.load();
     if (this.played) {
       this.audioElement.pause();
       this.played = !this.played;
@@ -164,7 +171,6 @@ export class HomePage implements OnInit {
       this.played = !this.played;
       console.log(this.audioElement.currentTime);
     }
-
   }
 
   updateProgress() {
@@ -202,6 +208,9 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit(): void {
+    this.audioElement.src = `../../../assets/audios/welcome.mp3`;
+    this.audioElement.load();
+
     // Subscribe to time updates every 100 milliseconds
     interval(100).subscribe(() => {
       this.updateProgress();
@@ -210,7 +219,7 @@ export class HomePage implements OnInit {
     // Listen to the 'loadedmetadata' event to get the duration of the audio
     this.audioElement.addEventListener('loadedmetadata', () => {
       this.duration = this.audioElement.duration;
-    })
+    });
     // this.getUpdates();
   }
 }

@@ -1,3 +1,5 @@
+<!-- Bismillahir Rahmaanir Rahiim -->
+
 <!-- <ion-header [translucent]="true" style="box-shadow: none">
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -191,43 +193,49 @@
                   </h3>
                 </marquee>
                 <small style="font-size: 10px"
-                  >Sheikh Abuu Ayman Al-Shiraaziy</small
+                  >{{'Sheikh Abuu Ayman Al-Shiraaziy'}}</small
                 >
               </ion-text>
             </div>
-            <div class="text-3xl pr-2 pl-2">
-              <ion-buttons slot="end">
-                <ion-icon
-                  button
-                  [name]="!played ? 'play':'pause'"
-                  (click)="playAudio('/assets/audios/welcome.mp3')"
-                ></ion-icon>
+            <div class="pl-3">
+              <ion-buttons slot="end" >
+                <ion-button fill="clear" shape="round" (click)="playAudio('/assets/audios/welcome.mp3')">
+                  <ion-icon
+                    [name]="!played ? 'play':'pause'"
+                  ></ion-icon>
+                </ion-button>
               </ion-buttons>
             </div>
           </div>
 
           <!-- audio progress -->
-          <div class="progress pt-2 pb-2">
+          <div
+            class="progress"
+            style="display: flex; gap: 1em; place-items: center"
+          >
             <ion-progress-bar
-              min="0"
-              max="100"
               type="determinate"
               [value]="(currentAudioTime / duration) * 1"
               reversed="false"
               color="primary"
-              [ariaValueMin]="'0'"
-              [ariaValueMax]="'100'"
-            ></ion-progress-bar>
+              class="mt-1"
+            >
+            </ion-progress-bar>
+            <small>40:00</small>
             <!-- <ion-range
+              class="p-0"
               min="0"
               max="100"
-              dualKnobs="true"
-              pin="true"
-              snaps="true"
+              dualKnobs="false"
+              pin="false"
+              snaps="false"
               step="1"
-              ticks="true"
+              ticks="false"
               [value]="(currentAudioTime / duration) * 100"
+              (ionChange)="rangeChange($event)"
+              mode="md"
             >
+              <ion-label slot="end">{{ (duration / 60).toFixed() }}:00</ion-label>
             </ion-range> -->
           </div>
         </div>
