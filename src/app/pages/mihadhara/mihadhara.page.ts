@@ -24,73 +24,57 @@ export class MihadharaPage implements OnInit {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     },
     {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     },
     {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     },
     {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     },
     {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     },
     {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     },
     {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     },
     {
       title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
       category: "Aqeedah",
       speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
-    },
-    {
-      title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
-      category: "Aqeedah",
-      speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
-    },
-    {
-      title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
-      category: "Aqeedah",
-      speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
-    },
-    {
-      title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
-      category: "Aqeedah",
-      speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
-    },
-    {
-      title: "Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria",
-      category: "Aqeedah",
-      speaker: "Sheikh Abuu Ayman Al-Shiraaziy",
-      duration: "40:00"
+      duration: "40:00",
+      src: ""
     }
   ];
 

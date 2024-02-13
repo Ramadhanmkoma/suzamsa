@@ -16,6 +16,7 @@ small {
   height: fit-content;
   color: #f1f1f1;
   border-radius: 0 0 0 1rem;
+  box-shadow: 0 0 .5rem #ccc;
 }
 
 .blur-container {
@@ -60,17 +61,13 @@ small {
   scroll-behavior: smooth;
 }
 
-.audio-list .scrl {
-  scroll-snap-align: start;
-}
+// .audio-list .scrl {
+//   scroll-snap-align: start;
+// }
 
 
 .all-list-item {
   border-bottom: 2px solid #DDD;
-}
-
-.all-list-item:nth-last-child() {
-  border-bottom: none !important;
 }
 
 @media(prefers-color-scheme: dark) {
