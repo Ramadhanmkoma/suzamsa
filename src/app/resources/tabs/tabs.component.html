@@ -1,0 +1,38 @@
+<ion-tabs class="i-tabs">
+  <ion-tab-bar class="text-xl" slot="bottom,top">
+    <ion-tab-button
+      tab="home"
+      [routerLink]="['/home']"
+      routerLinkActive="active"
+    >
+      <!-- <ion-icon name="home-outline"></ion-icon> -->
+      <ion-icon class="bi bi-house"></ion-icon>
+      <!-- <ion-label>Nyumbani</ion-label> -->
+    </ion-tab-button>
+    <ion-tab-button
+      tab="mihadhara"
+      [routerLink]="['/mihadhara']"
+      routerLinkActive="active"
+    >
+      <ion-icon name="library-outline"></ion-icon>
+      <!-- <ion-label>Mihadhara</ion-label> -->
+    </ion-tab-button>
+    <ion-tab-button
+      tab="gallery"
+      [routerLink]="['/gallery']"
+      routerLinkActive="active"
+    >
+      <ion-icon name="albums-outline"></ion-icon>
+      <!-- <ion-label>Mihadhara</ion-label> -->
+    </ion-tab-button>
+    <ion-tab-button
+      tab="suzamsa"
+      [routerLink]="['/suzamsa']"
+      routerLinkActive="active"
+    >
+      <!-- <ion-icon name="people-outline"></ion-icon> -->
+      <ion-icon class="bi bi-people"></ion-icon>
+      <!-- <ion-label>Suzamsa</ion-label> -->
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

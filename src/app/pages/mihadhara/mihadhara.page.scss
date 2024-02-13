@@ -1,28 +1,81 @@
 ion-menu-button {
-    color: var(--ion-color-primary);
+  color: var(--ion-color-primary);
+}
+
+small {
+  color: #999;
+  // font-size: 10px;
+  // text-align: center;
+}
+
+.view_played {
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  height: fit-content;
+  color: #f1f1f1;
+  border-radius: 0 0 0 1rem;
+  box-shadow: 0 0 .5rem #ccc;
+}
+
+.blur-container {
+  backdrop-filter: blur(7px);
+  height: 100%;
+  background-color: #000a;
+  border-radius: 0 0 0 1rem;
+}
+
+.audio_controls {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+  text-align: center;
+}
+
+.audio_controls .controls .buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+}
+
+.now_playing_txt {
+  animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: .5;
   }
-  
-  #container {
-    text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+  100% {
+    opacity: 1;
   }
-  
-  #container strong {
-    font-size: 20px;
-    line-height: 26px;
+}
+
+
+.audio-list {
+  height: calc(100% - 293.38px);
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+// .audio-list .scrl {
+//   scroll-snap-align: start;
+// }
+
+
+.all-list-item {
+  border-bottom: 2px solid #DDD;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+
   }
-  
-  #container p {
-    font-size: 16px;
-    line-height: 22px;
-    color: #8c8c8c;
-    margin: 0;
+
+  .all-list-item {
+    border-bottom: 2px solid #000;
   }
-  
-  #container a {
-    text-decoration: none;
-  }
+}

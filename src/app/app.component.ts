@@ -1,3 +1,5 @@
+// Bismillahir Rahmaanir Rahiim
+
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
@@ -14,8 +16,9 @@ import {
   IonMenuToggle,
   IonNote,
   IonRouterOutlet,
-  IonSplitPane
-,IonTabBar ,IonTabButton ,IonTabs } from '@ionic/angular/standalone';
+  IonSplitPane,
+  IonTabBar, IonTabButton, IonTabs
+} from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
   apps,
@@ -44,31 +47,30 @@ import {
   warningOutline,
   warningSharp,
 } from 'ionicons/icons';
-import { libraryOutline, librarySharp, homeOutline, homeSharp} from 'ionicons/icons';
+import { TabsComponent } from "./resources/tabs/tabs.component";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
-  standalone: true,
-  imports: [IonTabs, IonTabButton, IonTabBar,
-    RouterLink,
-    RouterLinkActive,
-    CommonModule,
-    IonApp,
-    IonSplitPane,
-    IonMenu,
-    IonContent,
-    IonList,
-    IonListHeader,
-    IonNote,
-    IonMenuToggle,
-    IonItem,
-    IonIcon,
-    IonLabel,
-    IonRouterOutlet,
-    HttpClientModule,
-  ],
+    selector: 'app-root',
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.scss'],
+    standalone: true,
+    imports: [IonTabs, IonTabButton, IonTabBar,
+        RouterLink,
+        RouterLinkActive,
+        CommonModule,
+        IonApp,
+        IonSplitPane,
+        IonMenu,
+        IonContent,
+        IonList,
+        IonListHeader,
+        IonNote,
+        IonMenuToggle,
+        IonItem,
+        IonIcon,
+        IonLabel,
+        IonRouterOutlet,
+        HttpClientModule, TabsComponent]
 })
 export class AppComponent {
   public appPages = [
