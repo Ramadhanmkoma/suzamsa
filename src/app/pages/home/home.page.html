@@ -1,17 +1,23 @@
-<ion-header [translucent]="true">
+<!-- Bismillahir Rahmaanir Rahiim -->
+
+<!-- <ion-header [translucent]="true" style="box-shadow: none">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>home</ion-title>
+    <ion-title>Nyumbani</ion-title>
+    <ion-buttons slot="end">
+      <span class="bi bi-bell"></span>
+    </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="true" class="pb-32">
+  <!-- <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">home</ion-title>
     </ion-toolbar>
+<<<<<<< HEAD
   </ion-header>
 
   <div class="home_container">
@@ -35,5 +41,231 @@
   <div id="container">
     <strong class="capitalize">This is Home Page </strong>
     <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+=======
+  </ion-header> -->
+
+  <!-- <header
+    class="text-2xl"
+    style="
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em 0.5em 0 0;
+    "
+  > -->
+  <!-- <ion-buttons slot="end">
+      <span class="bi bi-bell"></span>
+    </ion-buttons> -->
+  <!-- </ion-toolbar> -->
+  <!-- </header> -->
+
+  <div
+    id="container"
+    class="ion-padding gap-3"
+    style="display: flex; flex-direction: column; justify-content: center"
+  >
+    <div style="display: flex; flex-direction: column; gap: 0.5em">
+      <div style="display: flex; gap: 0.5em; place-items: center">
+        <ion-avatar style="width: 30px; height: 30px">
+          <img src="../../../assets/icon/favicon.jpg" width="30" height="30" />
+        </ion-avatar>
+        <h1 class="text-3xl" style="font-weight: 600">Suzamsa</h1>
+      </div>
+      <!-- <br /> -->
+      <small class="text-sm">
+        <ion-text color="primary">
+          Make Your Dunya Knowledge a Beacon of Light!
+        </ion-text>
+      </small>
+    </div>
+
+    <div class="search">
+      <ion-searchbar
+        placeholder="Tafuta hapa..."
+        inputmode="decimal"
+        type="decimal"
+        (ionChange)="onSearchChange($event)"
+        [debounce]="250"
+        mode="ios"
+        style="padding: 0"
+      ></ion-searchbar>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+      <div class="category-heading">
+        <h3 class="text-xl" style="font-weight: 600">Categories</h3>
+      </div>
+
+      <div
+        class="category-box overflow-x-auto"
+        style="
+          display: flex;
+          scrollbar-width: none;
+          scroll-behavior: smooth;
+          scroll-snap-type: x mandatory;
+        "
+      >
+        @for(category of categories; track category) {
+        <ion-card
+          button
+          (click)="selectedCategory()"
+          class="p-3 gap-1"
+          style="
+            flex: 1;
+            min-width: 100px;
+            height: auto;
+            border-radius: 1rem;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            scroll-snap-align: center;
+          "
+          [style]="'background-color:'+category.cardColor+';'"
+        >
+          <div class="text-2xl">
+            <ion-icon
+              slot="start"
+              [style.color]="category.iconColor"
+              [name]="category.icon"
+            ></ion-icon>
+          </div>
+          <ion-text
+            class=""
+            style="font-weight: 600"
+            [style.color]="category.iconColor"
+          >
+            <span>{{ category.categoryName }}</span>
+          </ion-text>
+        </ion-card>
+        }
+      </div>
+    </div>
+
+    <!-- Da'wa Gallery Summary -->
+    <div class="galleries">
+      <div class="gallery-heading">
+        <h3 class="text-xl" style="font-weight: 600">Gallery</h3>
+      </div>
+      <div
+        class="gallery-box overflow-x-auto"
+        style="
+          display: flex;
+          scroll-snap-type: x mandatory;
+          scrollbar-width: none;
+        "
+      >
+        @for(gallery of galleries; track gallery) {
+        <ion-card
+          button
+          (click)="viewGalleryImage()"
+          class="gap-1"
+          style="
+            min-width: 200px;
+            border-radius: 1rem;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            scroll-snap-align: center;
+            height: fit-content;
+          "
+        >
+          <div class="mb-0" style="border-radius: 1rem">
+            <img [src]="gallery.src" style="width: 100%; height: auto" />
+          </div>
+          <!-- <div>
+              <ion-text
+                class=""
+                style="font-weight: 600"
+                [style.color]="galleries[1].iconColor"
+              >
+                <span>{{ gallery.categoryName }}</span>
+              </ion-text>
+            </div> -->
+        </ion-card>
+        }
+      </div>
+    </div>
+
+    <!-- Welcome Da'wa Audio  -->
+    <ion-card class="audio-card" style="border-radius: 1rem">
+      <ion-card-content
+        style="display: flex; place-items: center"
+        class="gap-5"
+      >
+        <div>
+          <ion-avatar>
+            <img
+              src="../../../assets/icon/favicon.jpg"
+              alt="Karibu Suzamsa"
+              style="border-radius: 1rem"
+            />
+          </ion-avatar>
+        </div>
+        <div>
+          <div
+            style="
+              display: flex;
+              place-items: center;
+              justify-content: space-between;
+            "
+          >
+            <div style="flex: 2">
+              <ion-text>
+                <marquee behavior="smooth" direction="left">
+                  <h3 style="font-weight: 600">
+                    {{"Nasaha kwa Kinamama Juu ya Ufuatiliaji Elimu ya Kisheria"
+                    }}.
+                  </h3>
+                </marquee>
+                <small style="font-size: 10px"
+                  >{{'Sheikh Abuu Ayman Al-Shiraaziy'}}</small
+                >
+              </ion-text>
+            </div>
+            <div class="pl-3">
+              <ion-buttons slot="end" >
+                <ion-button fill="clear" shape="round" (click)="playAudio('/assets/audios/welcome.mp3')">
+                  <ion-icon
+                    [name]="!played ? 'play':'pause'"
+                  ></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </div>
+          </div>
+
+          <!-- audio progress -->
+          <div
+            class="progress"
+            style="display: flex; gap: 1em; place-items: center"
+          >
+            <ion-progress-bar
+              type="determinate"
+              [value]="(currentAudioTime / duration) * 1"
+              reversed="false"
+              color="primary"
+              class="mt-1"
+            >
+            </ion-progress-bar>
+            <small>40:00</small>
+            <!-- <ion-range
+              class="p-0"
+              min="0"
+              max="100"
+              dualKnobs="false"
+              pin="false"
+              snaps="false"
+              step="1"
+              ticks="false"
+              [value]="(currentAudioTime / duration) * 100"
+              (ionChange)="rangeChange($event)"
+              mode="md"
+            >
+              <ion-label slot="end">{{ (duration / 60).toFixed() }}:00</ion-label>
+            </ion-range> -->
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+>>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
   </div>
 </ion-content>

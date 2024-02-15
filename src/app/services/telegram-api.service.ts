@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 import { Injectable, inject } from '@angular/core';
+=======
+import { HttpClient } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
+import { Observable } from 'rxjs';
+>>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
 import { telegramConfig } from '../telegram.config';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+<<<<<<< HEAD
 //not working import * as MTProto from '@mtproto/core/envs/browser';
 
 // const MTProto: any = require('@mtproto/core/envs/browser')
 
+=======
+>>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
 @Injectable({
   providedIn: 'root',
 })
@@ -16,6 +25,7 @@ export class TelegramApiService {
   public config = telegramConfig;
   public mtProto: any;
 
+<<<<<<< HEAD
   constructor() {
     // this.mtProto = new MTProto({
     //   api_id: this.config.api_id,
@@ -23,12 +33,16 @@ export class TelegramApiService {
     //   test: false
     // })
   }
+=======
+  constructor() { }
+>>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
 
   getUpdates(): Observable<any> {
     return this.http.get<any>(
       'https://api.telegram.org/bot' + this.config.bot_token + '/getUpdates',
     );
   }
+<<<<<<< HEAD
 
   // public async call(method: string, params: {} = {}, options: {} = {}): Promise<any> {
   //   try {
@@ -57,4 +71,6 @@ export class TelegramApiService {
   //     phone_code: phone_code
   //   })
   // }
+=======
+>>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
 }
