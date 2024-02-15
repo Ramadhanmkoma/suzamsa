@@ -1,19 +1,9 @@
-<<<<<<< HEAD
 
-import { Component, OnInit, inject } from '@angular/core';
-=======
 // Bismillahir Rahmaanir Rahiim
 
->>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { IonicModule } from '@ionic/angular';
-import { ActivatedRoute } from '@angular/router';
-// import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { TelegramApiService } from 'src/app/services/telegram-api.service';
-=======
 import { IonicModule, SearchbarChangeEventDetail } from '@ionic/angular';
 import { IonRangeCustomEvent, IonSearchbarCustomEvent, RangeChangeEventDetail } from '@ionic/core';
 import { addIcons } from 'ionicons';
@@ -39,7 +29,6 @@ import { telegramConfig } from 'src/app/telegram.config';
 // import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle, IonContent, IonTabs, IonTabBar } from '@ionic/angular/standalone';
 
 // import { Telegram } from 'telegram-mtproto';
->>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
 
 @Component({
   selector: 'app-home',
@@ -49,43 +38,13 @@ import { telegramConfig } from 'src/app/telegram.config';
   imports: [IonicModule, CommonModule, FormsModule, TabsComponent],
 })
 export class HomePage implements OnInit {
-<<<<<<< HEAD
-  playAudio(_t20: any) {
-    new Audio(_t20).play();
+  rangeChange($event: IonRangeCustomEvent<RangeChangeEventDetail>) {
+    // this.audioElement.currentTime = Number($event.detail.value);
+    // this.currentAudioTime = this.audioElement.currentTime;
+    console.log($event.detail);
+    console.log($event);
+
   }
-
-  private telegramApiService = inject(TelegramApiService);
-
-  constructor() { }
-
-  messages: any[] = []
-  audios: any[] = []
-
-  getUpdates() {
-    this.telegramApiService.getUpdates().subscribe({
-      next: (data) => {
-        this.messages = data.result.slice(3);
-        console.log("messages", this.messages[3].message.audio);
-        this.audios = this.messages.filter((message) => message.message && message.message.audio);
-        console.log("audios", this.audios);
-
-      }
-    })
-  }
-
-
-  ngOnInit(): void {
-    this.getUpdates();
-  }
-=======
-rangeChange($event: IonRangeCustomEvent<RangeChangeEventDetail>) {
-  // this.audioElement.currentTime = Number($event.detail.value);
-  // this.currentAudioTime = this.audioElement.currentTime;
-  console.log($event.detail);
-  console.log($event);
->>>>>>> 218e07baaf8dcc028b2452da6820359769b369d0
-
-}
   played = false;
   currentAudioTime: number = 0;
   duration: number = 0;
